@@ -6,7 +6,7 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 local_lib_path = os.path.join(current_dir, 'local_lib')
 sys.path.insert(0, local_lib_path)
 
-# Import path module from local_lib
+# * Import path module from local_lib
 try:
     from path import Path
 except ImportError:
@@ -14,10 +14,10 @@ except ImportError:
     sys.exit(1)
 
 def main():
-    print("Starting my_program.py...")
+    print(" 👾 Starting my_program.py...")
     
     # Create a folder
-    folder_name = "new_folder"
+    folder_name = "-_Create_a_new_folder_-"
     new_folder = Path(folder_name)
     
     if not new_folder.exists():
@@ -30,7 +30,7 @@ def main():
     file_path = new_folder / "new_file.txt"
     
     # Write content to the file
-    message = "This file was created by my_program.py using path.py!\n"
+    message = "Hello, Salut, Hola! it is time !!!!!\n"
     message += "Python-Django - 1 Librairies Exercise 01"
     
     print(f"Writing to file: {file_path}")

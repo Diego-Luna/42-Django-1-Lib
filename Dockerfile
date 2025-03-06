@@ -26,15 +26,8 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
 # Configurar zsh como shell por defecto
 RUN chsh -s /usr/bin/zsh root
 
-# Personalizar oh-my-zsh (opcional)
-RUN sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="bira"/' ~/.zshrc && \
-    echo "plugins=(git)" >> ~/.zshrc
-
 # Crear directorio de trabajo
 WORKDIR /app
-
-# Dar permisos de ejecución al script
-# RUN chmod +x my_script.sh
 
 # Comando por defecto al iniciar el contenedor
 CMD ["zsh"]
